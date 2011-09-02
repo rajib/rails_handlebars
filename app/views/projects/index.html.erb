@@ -1,0 +1,28 @@
+<h1>Listing projects</h1>
+
+<div id="listPlaceholder"></div>>
+
+<%= link_to 'New Project', new_project_path %>
+<%= link_to 'Reload', '#', id: 'listRefresh' %>
+<br />
+
+<script id="listTemplate" type="text/x-handlebars-template">
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Department</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </thead>
+    <tbody>
+      {{#each this}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{department}}</td>
+          <td>{{id}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</script>
